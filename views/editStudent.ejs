@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit student</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href=".../styles/style.css">
+
+</head>
+
+<body class="bg-beige my-3vh">
+
+    <div class="container w-50 py-2 bg-translucent rounded-15px">
+
+        <h1 class="text-center">Edit Student</h1>
+
+        <form method="POST" action="/students/<%=token%>?_method=PUT" class="d-flex flex-column align-items-center">
+            <input name="id" value="<%=student.id%>" hidden required>
+            <input type="text" value="<%=student.name%>" name="name" placeholder="name" class="text-center my-1 w-75 rounded" required>
+            <input type="number" value="<%=student.testOne%>" min="0" max="3" name="testOne" placeholder="test 1 grade" class="text-center my-1 ps-3 w-50 rounded" required>
+            <input type="number" value="<%=student.testTwo%>" min="0" max="3" name="testTwo" placeholder="test 2 grade" class="text-center my-1 ps-3 w-50 rounded" required>
+            <input type="number" value="<%=student.works%>" min="0" max="4" name="works" placeholder="works total grade" class="text-center my-1 ps-3 w-50 rounded" required>
+            <input type="submit" value="edit" class="btn btn-info my-1 w-25">
+        </form>
+
+    </div>
+
+    <a href="/students/admin/<%=token%>"><h6 class="text-center mt-3">Undo alterations and back to main page</h6></a>
+
+</body>
+
+</html>

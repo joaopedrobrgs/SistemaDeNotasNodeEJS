@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register User</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/style.css">
+
+</head>
+
+<body class="bg-beige my-3vh">
+
+    <div class="mx-2 my-2">
+
+        <h1 class="text-center">Register</h1>
+
+        <form method="POST" action="/register">
+            <input name="name" placeholder="name" type="text">
+            <input name="email" placeholder="email" type="email">
+            <input name="password" placeholder="password" type="password"  id="passwordInput">
+            <input type="checkbox" onclick="showPassword()">Show Password
+            <div>
+                <button class="btn btn-success">Register</button>
+                <a href="/" class="btn btn-danger">Go Back</a>
+            </div>
+        </form>
+
+    </div>
+
+    <script>
+        function showPassword() {
+            var input = document.getElementById("passwordInput");
+            if (input.type === "password") {
+                input.type = "text";
+            } else {
+                input.type = "password";
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>

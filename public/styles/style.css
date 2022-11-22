@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.my-3vh{
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+
+.bg-beige{
+    background-image: linear-gradient(to bottom left, rgb(192,148,109), rgb(229,213,190), rgb(229,213,190), rgb(56,109,141));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.bg-translucent{
+    background-color: rgba(236,224,208, 0.2);
+    box-shadow: 3px 3px 15px 1px rgba(55,55,55, 0.5);
+}
+
+.rounded-15px{
+    border-radius: 15px;
+}
